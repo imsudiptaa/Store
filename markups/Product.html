@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" href="../assets/favicon.svg">
+    <title>Shop Luxury Watches | WatchKraft Collections</title>
+  <meta name="description" content="Explore WatchKraft's curated collections of handcrafted luxury watches. Free shipping and a 2-year warranty included.">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Shop Luxury Watches | WatchKraft">
+  <meta property="og:image" content="https://watchkraft.netlify.app/assets/og-shop.jpg">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/product.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="../index.html">
+            <img src="../assets/logo-light.svg" alt="">
+        </a>
+        <div class="nav-head">
+            <ul>
+                <li>
+                    <a href="../index.html"><h1>HOME</h1></a>
+                </li>
+                <li>
+                    <a href="./service.html"><h1>SERVICE</h1></a>
+                </li>
+                <li>
+                    <a href="./Product.html"><h1>PRODUCTS</h1></a>
+                </li>
+                <li>
+                    <a href="./wishList.html"><h1>WISH LIST</h1></a>
+                </li>
+                <li>
+                    <a href="./contact.html"><h1>CONTACT US</h1></a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <header>
+                <div class="cart-icon">
+                    <a href="./shopCart.html">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </a>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>
+            <a href="./login.html" class="login">
+                <i class="ri-user-line"></i>
+            </a>
+        </div>
+        <div class="hamburger">
+            <button type="" class="menu-button" onclick="navOpen()">
+                <img src="../assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+            </button>
+        </div>
+
+        <div class="nav-head2" id="nav-head2">
+            <div class="cancelBox">
+                <button type="" class="menu-button cancel" onclick="navClose()">
+                    X
+                </button>
+            </div>
+            <ul>
+                <li>
+                    <h1><a href="../index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./contact.html">CONTACT US</a></h1>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="filterButton">
+        <button onclick="filterToggle()">Filters</button>
+    </div>
+
+    <!-- Filters Section -->
+    <section class="filters" id="filterPanel">
+        <div class="container">
+            <h2>Filter Products</h2>
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search watches...">
+                <!-- <button id="dropdownButton">
+                    <i class="ri-arrow-down-s-line"></i>
+                </button> -->
+            </div>
+            
+            <div class="advanced-filters">
+                <select id="categoryFilter" onchange="applyFilters()">
+                    <option value="all">All Categories</option>
+                    <option value="male">Men</option>
+                    <option value="female">Women</option>
+                    <option value="unisex">Unisex</option>
+                </select>
+
+                <select id="brandFilter">
+                    <option value="all">All Brands</option>
+                    <option value="casio">Casio</option>
+                    <option value="titan">Titan</option>
+                    <option value="helix">Helix</option>
+                </select>
+
+                <select id="typeFilter" onchange="applyFilters()">
+                    <option value="all">All Types</option>
+                    <option value="analog">Analog</option>
+                    <option value="digital">Digital</option>
+                </select>
+
+                <select id="materialFilter" onchange="applyFilters()">
+                    <option value="all">All Materials</option>
+                    <option value="metal">Metal</option>
+                    <option value="leather">Leather</option>
+                    <option value="plastic">Plastic</option>
+                    <option value="resin">Resin</option>
+                </select>
+
+                <div class="color-filter">
+                    <div class="color-option" data-color="silver" onclick="toggleColorFilter('silver')"></div>
+                    <div class="color-option" data-color="gold" onclick="toggleColorFilter('gold')"></div>
+                    <div class="color-option" data-color="black" onclick="toggleColorFilter('black')"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="product-grid">
+        <h2>Our Products</h2>
+        <div class="product" 
+            data-id="1"
+            data-gender="male" 
+            data-brand="casio" 
+            data-type="analog" 
+            data-material="leather"
+            data-color="gold silver"
+            data-stock="5"
+        >
+            <img src="../assets/copper-watch.svg" alt="Copper Watch">
+            <h2>Copper Alloy</h2>
+            <p>$299.99</p>
+            <p class="brand">Casio</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="2"
+            data-gender="female" 
+            data-brand="titan"
+            data-type="analog"
+            data-material="metal"
+            data-color="silver black"
+            data-stock="5"
+        >
+            <img src="../assets/silver-watch.svg" alt="Silver Watch">
+            <h2>Silver Spark</h2>
+            <p>$349.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="3"
+            data-gender="unisex" 
+            data-brand="helix"
+            data-type="analog"
+            data-material="leather"
+            data-color="black"
+            data-stock="5"
+        >
+            <img src="../assets/leather-watch.svg" alt="Leather Watch">
+            <h2>Leather Ivory</h2>
+            <p>$279.99</p>
+            <p class="brand">Helix</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="4"
+            data-gender="male" 
+            data-brand="casio"
+            data-type="analog"
+            data-material="metal"
+            data-color="gold"
+            data-stock="5"
+        >
+            <img src="../assets/gold-watch.svg" alt="Gold Watch">
+            <h2>Gold Noir</h2>
+            <p>$399.99</p>
+            <p class="brand">Casio</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="5"
+            data-gender="male" 
+            data-brand="casio"
+            data-type="digital"
+            data-material="leather"
+            data-color="white"
+            data-stock="5"
+        >
+            <img src="../assets/Titan-digital.svg" alt="Digital Watch">
+            <h2>Pixel Pulse</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="6"
+            data-gender="female" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="plastic"
+            data-color="pink"
+            data-stock="4"
+        >
+            <img src="../assets/Pink-plastic-watch.svg" alt="Analog Watch">
+            <h2>Rosé Dial</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="7"
+            data-gender="female" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="metal"
+            data-color="purple"
+            data-stock="6"
+        >
+            <img src="../assets/Purple Pulse.avif" alt="Analog Watch">
+            <h2>Purple Pulse</h2>
+            <p>$399.99</p>
+            <p class="brand">Helix</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="8"
+            data-gender="female" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="metal"
+            data-color="golden"
+            data-stock="6"
+        >
+            <img src="../assets/Raga Showstopper.webp" alt="Analog Watch">
+            <h2>Raga Showstopper</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="9"
+            data-gender="male" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="metal"
+            data-color="silver"
+            data-stock="6"
+        >
+            <img src="../assets/Regalia Opulent.webp" alt="Analog Watch">
+            <h2>Regalia Opulent</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="10"
+            data-gender="female" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="leather"
+            data-color="golden"
+            data-stock="6"
+        >
+            <img src="../assets/Leather Gold.avif" alt="Analog Watch">
+            <h2>Leather Gold</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="11"
+            data-gender="unisex" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="resin"
+            data-color="black"
+            data-stock="6"
+        >
+            <img src="../assets/Black Resin.webp" alt="Analog Watch">
+            <h2>Black Resin</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="12"
+            data-gender="male" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="metal"
+            data-color="blue"
+            data-stock="6"
+        >
+            <img src="../assets/Ocean Whirl.webp" alt="Analog Watch">
+            <h2>Ocean Whirl</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="13"
+            data-gender="unisex" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="leather"
+            data-color="golden"
+            data-stock="6"
+        >
+            <img src="../assets/Timeless Vintage.avif" alt="Analog Watch">
+            <h2>Timeless Vintage</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="14"
+            data-gender="female" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="metal"
+            data-color="golden"
+            data-stock="6"
+        >
+            <img src="../assets/Raga Chic.webp" alt="Analog Watch">
+            <h2>Raga Chic</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+        <div class="product" 
+            data-id="15"
+            data-gender="female" 
+            data-brand="Titan"
+            data-type="analog"
+            data-material="metal"
+            data-color="golden"
+            data-stock="6"
+        >
+            <img src="../assets/Green Luxury.jpg" alt="Analog Watch">
+            <h2>Green Luxury</h2>
+            <p>$399.99</p>
+            <p class="brand">Titan</p>
+            <p class="stock-status"></p> <!-- Stock availability -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./Product.html">Shop</a></li>
+                    <li><a href="./shopCart.html">Deals</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="./service.html">FAQs</a></li>
+                    <li><a href="./service.html">Return Policy</a></li>
+                    <li><a href="./service.html">Privacy Policy</a></li>
+                    <li><a href="./service.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+           
+        </div>
+    </footer>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+
+    <!-- Product script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const gender = params.get("gender");
+            const brand = params.get("brand");
+            const searchQuery = params.get("search") ? params.get("search").toLowerCase() : null;
+        
+            let foundProduct = false; // Flag to track if any product matches
+        
+            document.querySelectorAll(".product").forEach(product => {
+                let matchesGender = !gender || gender === "all" || product.getAttribute("data-gender") === gender;
+                let matchesBrand = !brand || brand === "all" || product.getAttribute("data-brand") === brand;
+        
+                let productTitleElement = product.querySelector("h2");
+                let productTitle = productTitleElement ? productTitleElement.innerText.toLowerCase() : "";
+        
+                let productGender = product.getAttribute("data-gender") ? product.getAttribute("data-gender").toLowerCase() : "";
+                let productBrand = product.getAttribute("data-brand") ? product.getAttribute("data-brand").toLowerCase() : "";
+        
+                let matchesSearch = !searchQuery || 
+                    productTitle.includes(searchQuery) || 
+                    productGender.includes(searchQuery) || 
+                    productBrand.includes(searchQuery);
+        
+                if (matchesGender && matchesBrand && matchesSearch) {
+                    product.style.display = "block";
+                    foundProduct = true; // At least one product matches
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        
+            // If no product matches, show an alert
+            if (!foundProduct) {
+                window.location.href = `index.html`;
+                alert("Product doesn't exist!");
+            }
+        });
+
+        window.onscroll = function() {
+            let button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function redirectToCheckout() {
+            window.location.href = 'checkout.html';
+        }
+        
+    </script>
+    <script>
+        function navOpen() {
+            document.getElementById('nav-head2').classList.add('active');
+        }
+
+        function navClose() {
+            document.getElementById('nav-head2').classList.remove('active');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function filterToggle() {
+            document.getElementById('filterPanel').classList.toggle('open');
+        }
+    </script>
+    <script src="../logic/shopCart.js"></script>
+    <script src="../logic/Product.js"></script>
+    <script src="../logic/wishList.js"></script>
+
+</body>
+</html>

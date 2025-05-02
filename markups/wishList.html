@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="../assets/favicon.svg">
+    <!-- <link rel="stylesheet" href="../styles/shopCart.css" /> -->
+    <title>Your Wishlist | Save Luxury Watches for Later</title>
+  <meta name="description" content="Your WatchKraft wishlist: Curate your favorite handcrafted watches and shop them anytime. Free shipping on all orders.">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Your WatchKraft Wishlist | Save Luxury Timepieces">
+  <meta property="og:url" content="https://watchkraft.netlify.app/wishList.html">
+    <link rel="stylesheet" href="../styles/wishList.css" />
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="../index.html">
+            <img src="../assets/logo-light.svg" alt="">
+        </a>
+        <div class="nav-head">
+            <ul>
+                <li>
+                    <a href="../index.html"><h1>HOME</h1></a>
+                </li>
+                <li>
+                    <a href="./service.html"><h1>SERVICE</h1></a>
+                </li>
+                <li>
+                    <a href="./Product.html"><h1>PRODUCTS</h1></a>
+                </li>
+                <li>
+                    <a href="./wishList.html"><h1>WISH LIST</h1></a>
+                </li>
+                <li>
+                    <a href="./contact.html"><h1>CONTACT US</h1></a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <header>
+                <div class="cart-icon">
+                    <a href="./shopCart.html">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </a>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>
+            <a href="./login.html" class="login">
+                <i class="ri-user-line"></i>
+            </a>
+        </div>
+        <div class="hamburger">
+            <button type="" class="menu-button" onclick="navOpen()">
+                <img src="../assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+            </button>
+        </div>
+
+        <div class="nav-head2" id="nav-head2">
+            <div class="cancelBox">
+                <button type="" class="menu-button cancel" onclick="navClose()">
+                    X
+                </button>
+            </div>
+            <ul>
+                <li>
+                    <h1><a href="../index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./contact.html">CONTACT US</a></h1>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wishlist-controls">
+        <label for="sort-options">Sort by:</label>
+        <select id="sort-options">
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="stock">Stock Status</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="in-stock-filter"> Show only in-stock
+        </label>
+    </div>
+
+    <div class="my-wishList wishList-page">
+        <p>Your wishlist is currently empty.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./Product.html">Shop</a></li>
+                    <li><a href="./shopCart.html">Deals</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="./service.html">FAQs</a></li>
+                    <li><a href="./service.html">Return Policy</a></li>
+                    <li><a href="./service.html">Privacy Policy</a></li>
+                    <li><a href="./service.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            
+        </div>
+    </footer>
+
+    <script>
+        function navOpen() {
+            document.getElementById('nav-head2').classList.add('active');
+        }
+
+        function navClose() {
+            document.getElementById('nav-head2').classList.remove('active');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+    <script src="../logic/shopCart.js"></script>
+    <script src="../logic/wishList.js"></script>
+
+</body>
+
+</html>

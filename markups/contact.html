@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" href="../assets/favicon.svg">
+    <title>Contact Us | WatchKraft Luxury Watches Support</title>
+  <meta name="description" content="Get in touch with WatchKraft's customer service team for inquiries, repairs, or collaborations. We’re here to help!">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Contact WatchKraft | Premium Customer Support">
+  <meta property="og:url" content="https://watchkraft.netlify.app/contact.html">
+  <meta property="og:image" content="https://watchkraft.netlify.app/assets/og-contact.jpg">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .send-btn {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="../index.html">
+            <img src="../assets/logo-light.svg" alt="">
+        </a>
+        <div class="nav-head">
+            <ul>
+                <li>
+                    <a href="../index.html"><h1>HOME</h1></a>
+                </li>
+                <li>
+                    <a href="./service.html"><h1>SERVICE</h1></a>
+                </li>
+                <li>
+                    <a href="./Product.html"><h1>PRODUCTS</h1></a>
+                </li>
+                <li>
+                    <a href="./wishList.html"><h1>WISH LIST</h1></a>
+                </li>
+                <li>
+                    <a href="./contact.html"><h1>CONTACT US</h1></a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <header>
+                <div class="cart-icon">
+                    <a href="./shopCart.html">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </a>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>
+            <a href="./login.html" class="login">
+                <i class="ri-user-line"></i>
+            </a>
+        </div>
+        <div class="hamburger">
+            <button type="" class="menu-button" onclick="navOpen()">
+                <img src="../assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+            </button>
+        </div>
+
+        <div class="nav-head2" id="nav-head2">
+            <div class="cancelBox">
+                <button type="" class="menu-button cancel" onclick="navClose()">
+                    X
+                </button>
+            </div>
+            <ul>
+                <li>
+                    <h1><a href="../index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./contact.html">CONTACT US</a></h1>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Contact Us Section -->
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Get in <span class="highlight">Touch</span></h2>
+            <p class="description">We're here to assist you with any inquiries about our luxury timepieces. Feel free to
+                reach out to us.</p>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h3>Visit Our Boutique</h3>
+                    <p>123 Luxury Avenue, Suite 500<br>New York, NY 10001</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h3>Call Us</h3>
+                    <p>+1 (212) 555-7890<br>+1 (800) WATCHES</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email Us</h3>
+                    <p>info@watchkraft.com<br>service@watchkraft.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday: 10:00 AM - 7:00 PM<br>Saturday: 11:00 AM - 6:00 PM<br>Sunday: By Appointment
+                        Only</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send us a <span class="highlight">Message</span></h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="+1 (123) 456-7890">
+                </div>
+
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="How can we help you?">
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Please provide details about your inquiry..."></textarea>
+                </div>
+                <a href="../markups/404.html" class="send-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </a>
+                <!-- <button type="submit" class="send-btn" onclick="window.location.href='/markups/404.html'">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button> -->
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./Product.html">Shop</a></li>
+                    <li><a href="./shopCart.html">Deals</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="./service.html">FAQs</a></li>
+                    <li><a href="./service.html">Return Policy</a></li>
+                    <li><a href="./service.html">Privacy Policy</a></li>
+                    <li><a href="./service.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            
+        </div>
+    </footer>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        window.onscroll = function () {
+            let button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+    <script>
+        function navOpen() {
+            document.getElementById('nav-head2').classList.add('active');
+        }
+
+        function navClose() {
+            document.getElementById('nav-head2').classList.remove('active');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+    <script src="../logic/script.js"></script>
+    <script src="../logic/shopCart.js"></script>
+</body>
+
+</html>
