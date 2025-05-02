@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>WatchKraft | Luxury Handcrafted Watches for Men & Women</title>
+  <link rel="icon" type="image/svg" href="./assets/favicon.svg" />
+  <meta name="description" content="Discover premium handcrafted watches at WatchKraft. Timeless designs, free worldwide shipping, and 100% authentic materials. Shop now for elegance you can trust.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://watchkraft.netlify.app/">
+  <meta property="og:title" content="WatchKraft | Luxury Handcrafted Watches">
+  <meta property="og:description" content="Discover premium handcrafted watches at WatchKraft. Timeless designs, free worldwide shipping, and 100% authentic materials.">
+  <meta property="og:image" content="https://watchkraft.netlify.app/assets/og-home.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://watchkraft.netlify.app/">
+  <meta property="twitter:title" content="WatchKraft | Luxury Handcrafted Watches">
+  <meta property="twitter:description" content="Discover premium handcrafted watches at WatchKraft. Timeless designs, free worldwide shipping, and 100% authentic materials.">
+  <meta property="twitter:image" content="https://watchkraft.netlify.app/assets/og-home.jpg">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/testimonials.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@500;700&display=swap">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">
+            <img src="./assets/logo-light.svg" alt="">
+        </a>
+        <div class="nav-head">
+            <ul>
+                <li>
+                    <a href="index.html"><h1>HOME</h1></a>
+                </li>
+                <li>
+                    <a href="./markups/service.html"><h1>SERVICE</h1></a>
+                </li>
+                <li>
+                    <a href="./markups/Product.html"><h1>PRODUCTS</h1></a>
+                </li>
+                <li>
+                    <a href="./markups/wishList.html"><h1>WISH LIST</h1></a>
+                </li>
+                <li>
+                    <a href="./markups/contact.html"><h1>CONTACT US</h1></a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <header>
+                <div class="cart-icon">
+                    <a href="./markups/shopCart.html">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </a>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>
+            <a href="markups/login.html" class="login">
+                <i class="ri-user-line"></i>
+            </a>
+        </div>
+        <div class="hamburger">
+            <button type="" class="menu-button" onclick="navOpen()">
+                <img src="./assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+            </button>
+        </div>
+
+        <div class="nav-head2" id="nav-head2">
+            <div class="cancelBox">
+                <button type="" class="menu-button cancel" onclick="navClose()">
+                    X
+                </button>
+            </div>
+            <ul>
+                <li>
+                    <h1><a href="index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./markups/service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./markups/Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./markups/wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./markups/contact.html">CONTACT US</a></h1>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search and Filters -->
+    <section class="filters">
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Search for watches..." onkeypress="handleSearch(event)">
+            <button id="dropdownButton">
+                <i class="ri-arrow-down-s-line"></i>
+            </button>
+        </div>
+        <div class="dropdown-filters" id="dropdownFilters">
+            <select id="categoryFilter" onchange="applyFilters()">
+                <option value="all">All Categories</option>
+                <option value="male">Men</option>
+                <option value="female">Women</option>
+                <option value="unisex">Unisex</option>
+            </select>
+
+            <select id="brandFilter" onchange="applyFilters()">
+                <option value="all">All Brands</option>
+                <option value="casio">Casio</option>
+                <option value="helix">Helix</option>
+                <option value="titan">Titan</option>
+            </select>
+        </div>
+    </section>
+    <section>
+        <div class="carousel">
+            <div class="left-box">
+                <div>
+                    <div class=" watch-box copper-box">
+                        <div class="cover">
+                            <h1>Copper</h1>
+                            <h1>Alloy</h1>
+                        </div>
+                        <img src="./assets/copper-watch.svg" alt="" class="copper-left">
+                    </div>
+                    <div class="watch-box silver-box">
+                        <div class="cover">
+                            <h1>Silver</h1>
+                            <h1>Spark</h1>
+                        </div>
+                        <img src="./assets/silver-watch.svg" alt="" class="silver-left">
+                    </div>
+                    <div class="watch-box leather-box">
+                        <div class="cover">
+                            <h1>Leather</h1>
+                            <h1>Ivory</h1>
+                        </div>
+                        <img src="./assets/leather-watch.svg" alt="" class="leather-left">
+                    </div>
+                    <div class="watch-box gold-box">
+                        <div class="cover">
+                            <h1>Gold</h1>
+                            <h1>Noir</h1>
+                        </div>
+                        <img src="./assets/gold-watch.svg" alt="" class="gold-left">
+                    </div>
+                </div>
+            </div>
+            <div class="right-box">
+                <button class="car-btn prev"><img src="./assets/bkd-arrow.svg" alt=""></button>
+                <div>
+                    <img src="./assets/copper-watch.svg" class="watch-pic copper">
+                    <img src="./assets/silver-watch.svg" class="watch-pic silver">
+                    <img src="./assets/leather-watch.svg" class="watch-pic leather">
+                    <img src="./assets/gold-watch.svg" class="watch-pic gold">
+                </div>
+                <button class="car-btn next"><img src="./assets/fwd-arrow.svg" alt=""></button>
+            </div>
+        </div>
+    </section>
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About WatchKraft</h2>
+                    <p>WatchKraft has been crafting timeless timepieces that combine precision engineering with
+                        exquisite design. Our watches are more than just instruments to tell time - they're statements
+                        of
+                        personal style and enduring quality.</p>
+                    <p>Every WatchKraft timepiece undergoes rigorous testing to ensure superior performance and
+                        longevity.
+                        From classic designs to modern innovations, we offer watches that transcend trends and become
+                        lifelong companions.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/elegant-watch.jpg" alt="Luxury Watch" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Timeless Elegance</h1>
+            <p class="hero-subtitle">Crafting precision since 1987</p>
+            <div class="cta-container">
+                <a href="markups/Product.html" class="cta-button">Explore Collections</a>
+            </div>
+        </div>
+    </section>
+    <section class="section-testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <div class="testimonial-sub">
+            <span class="subheading">Testimonials</span> 
+            <br/>
+            <br/>   
+            <h2 class="heading-secondary">
+                Once you try it, you can't go back ! 
+            </h2>
+            </div>
+            <div class="testimonials">
+                <figure class="testimonial">
+                    <img class="testimonial-img" src="assets/customers/jane.jpg" srcset="assets/customers/dave.webp"
+                        alt="Photo of customer Dave Bryson" loading="lazy" />
+                    <blockquote class="testimonial-text">
+                        I highly recommend Watchkraft! This has been the 8th watch I sold online and my first with Watchkraft. The quote I received was much higher than any other offer, and the process was quick, safe, and professionally handled.
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Dave Bryson</p>
+                </figure>
+                <figure class="testimonial">
+                    <img class="testimonial-img" src="assets/customers/ben.jpg" srcset="assets/customers/ben.webp"
+                        alt="Photo of customer Ben Hadley" loading="lazy" />
+                    <blockquote class="testimonial-text">
+                        Your photos and description were right on. The care in packaging was exceptional—no hidden traps here! The watch exceeded my expectations, and your service felt like old-world professionalism in a new-world enterprise.
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Ben Hadley</p>
+                </figure>
+                <figure class="testimonial">
+                    <img class="testimonial-img" src="assets/customers/steve.jpg" srcset="assets/customers/steve.webp"
+                        loading="lazy" alt="Photo of customer Steve Miller" />
+                    <blockquote class="testimonial-text">
+                        They restored my 100-year-old pocket watch and a vintage Rolex flawlessly. Their team is knowledgeable, prices are fair, and their passion for timepieces is unmatched. A trusted partner for watch lovers.
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Steve Miller</p>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./markups/Product.html">Shop</a></li>
+                    <li><a href="./markups/shopCart.html">Deals</a></li>
+                    <li><a href="./markups/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="./markups/faq.html">FAQs</a></li>
+                    <li><a href="./markups/service.html">Return Policy</a></li>
+                    <li><a href="./markups/service.html">Privacy Policy</a></li>
+                    <li><a href="./markups/service.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></i></a>
+                </div>
+                 <!--payment options-->
+            <div class="footer-section payments">
+                <h2>We accept</h2>
+                <div class="payments">
+                    <a href="https://www.apple.com/apple-pay/" target="_blank" class="payment-link apple-pay">
+                        <i class="fab fa-apple-pay" style="font-size:30px; text-decoration: none; color: #fff; padding-right: 5px;" 
+                        onmouseover="this.style.color='#fdd835';this.style.transform='scale(1.2)';"
+                        onmouseout="this.style.color='#fff'; this.style.transform='scale(0.8)';"></i>
+                    </a>
+                    <a href="https://pay.google.com/intl/en_in/about/" class="payment-link google-pay">
+                        <i class="fa-brands fa-google-pay" style="font-size:30px; text-decoration: none; color: #fff; padding-right: 5px;"
+                        onmouseover="this.style.color='#fdd835';this.style.transform='scale(1.2)';"
+                        onmouseout="this.style.color='#fff'; this.style.transform='scale(0.9)';"></i>
+                    </a>
+                    <a href="https://redemption.mastercard.com/#/user/login?language=en-US" class="payment-link mastercard">
+                        <i class="fa-brands fa-cc-mastercard" style="font-size:25px; text-decoration: none; color: #fff; padding-right: 5px;"
+                        onmouseover="this.style.color='#fdd835';this.style.transform='scale(1.2)';"
+                        onmouseout="this.style.color='#fff'; this.style.transform='scale(0.8)';"></i>
+                    </a>
+                    <a href="https://www.visa.com.au/en_au/account/login" class="payment-link visa">
+                        <i class="fa-brands fa-cc-visa" style="font-size:25px; text-decoration: none; color: #fff; padding-right: 5px;"
+                        onmouseover="this.style.color='#fdd835';this.style.transform='scale(1.2)';"
+                        onmouseout="this.style.color='#fff'; this.style.transform='scale(0.8)';"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© <span class="year"></span> WatchKraft | Designed by <b>Sudipta Mandal|<span style ="color:red;"> Made with love &hearts;</span></b></p>
+
+
+        </div>
+    </footer>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./logic/script.js"></script>
+    <script>
+        function navOpen() {
+            document.getElementById('nav-head2').style.display = 'block';
+        }
+
+        function navClose() {
+            document.getElementById('nav-head2').style.display = 'none';
+        }
+
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+</body>
+
+</html>
